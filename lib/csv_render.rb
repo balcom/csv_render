@@ -11,6 +11,6 @@ ActionController::Renderers.add :csv do |object, options|
       end
     end
   end
-  send_data(csv, :filename => "#{object.first.class.to_s_tableize}.csv",
+  send_data(csv, :filename => "#{object.first.class.to_s.tableize}.csv",
     :type => "text/csv", :disposition => "attachment")
 end

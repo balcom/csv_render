@@ -5,7 +5,7 @@ Gem::Specification.new do |s|
   s.summary = "Rails engine to render AR model as CSV"
   s.description = "CsvRender is a Ruby on Rails engine to render an ActiveRecord model as CSV"
   s.files = Dir["lib/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
-  s.version = "0.0.2"
+  s.version = "0.0.3"
 
   s.add_dependency('fastercsv', '>= 1.5.4')
 end
