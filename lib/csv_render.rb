@@ -7,7 +7,7 @@ ActionController::Renderers.add :csv do |object, options|
     c << column_names
     object.each do |o|
       c << column_names.collect do |cn|
-        o.attributes[cn].gsub(/(\r\n|\t)/, ',')
+        o.attributes[cn].to_s.gsub(/(\r\n|\t)/, ',')
       end
     end
   end
