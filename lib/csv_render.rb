@@ -13,7 +13,7 @@ class CsvRender
         end
       end
     end
-    send_data(csv, :filename => "#{object.first.class.to_s.tableize}.#{file_options[:extension]}",
+    ActionController::Renderers.send_data(csv, :filename => "#{object.first.class.to_s.tableize}.#{file_options[:extension]}",
       :type => file_options[:type], :disposition => "attachment")
   end
 end
